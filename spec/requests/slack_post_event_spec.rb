@@ -10,7 +10,7 @@ RSpec.describe "Slack post event", type: :request do
       post "/slack/event", params: { slack: { token: "invalid" } }
     end
 
-    it "sends errors to Rollbar" do
+    xit "sends errors to Rollbar" do
       error = StandardError.new("oops")
       allow(REDIS).to receive(:publish).and_raise(error)
       expect(Rollbar).to receive(:error).with(

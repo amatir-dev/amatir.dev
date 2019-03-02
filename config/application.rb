@@ -46,5 +46,11 @@ module RubyOnRailsLink
 
     # Language
     config.i18n.default_locale = :id
+
+    # Error Reporting
+
+    Raven.configure do |config|
+      config.dsn = ENV['SENTRY_DSN']
+    end
   end
 end
