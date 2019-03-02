@@ -1,12 +1,14 @@
-[![Code Climate](https://codeclimate.com/github/railslink/railslink/badges/gpa.svg)](https://codeclimate.com/github/railslink/railslink)
-[![Circle CI](https://circleci.com/gh/railslink/railslink.svg?style=shield)](https://circleci.com/gh/railslink/railslink)
-[![Coverage Status](https://coveralls.io/repos/railslink/railslink/badge.svg?branch=coverage&service=github)](https://coveralls.io/github/railslink/railslink?branch=coverage)
+<!-- [![Code Climate](https://codeclimate.com/github/railslink/railslink/badges/gpa.svg)](https://codeclimate.com/github/railslink/railslink) -->
+<!-- [![Circle CI](https://circleci.com/gh/railslink/railslink.svg?style=shield)](https://circleci.com/gh/railslink/railslink) -->
+<!-- [![Coverage Status](https://coveralls.io/repos/railslink/railslink/badge.svg?branch=coverage&service=github)](https://coveralls.io/github/railslink/railslink?branch=coverage) -->
 
-# Ruby on Rails Link
+# AMATIR.DEV
 
-http://www.rubyonrails.link
+https://amatir.dev
 
-Official website of Ruby on Rails Link.
+Situs resmi komunitas online AMATIR.DEV.
+
+(fork dari http://www.rubyonrails.link)
 
 ## Getting Started
 

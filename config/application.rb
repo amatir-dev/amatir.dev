@@ -41,7 +41,7 @@ module RubyOnRailsLink
     config.active_job.queue_adapter = :sucker_punch
 
     # Application configuration
-    configatron.app_name = 'Ruby on Rails Link'
-    configatron.ga.tracking_id = 'UA-64301219-1'
+    configatron.app_name = 'AMATIR.DEV'
+    configatron.ga.tracking_id = 'UA-82068314-2'
   end
 end
