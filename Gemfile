@@ -47,6 +47,12 @@ group :development do
   gem 'web-console', '>= 3.3.0'                                    # a debugging tool for ruby on rails applications
   gem 'listen', '>= 3.0.5', '< 3.2'                                # listens to file modifications and notifies you about the changes
   gem 'ffi', '~> 1.9.24'                                           # a foreign function interface ruby implementation
+
+  gem 'capistrano',         require: false
+  gem 'capistrano-rbenv',     require: false
+  gem 'capistrano-rails',   require: false
+  gem 'capistrano-bundler', require: false
+  gem 'capistrano3-puma',   require: false
 end
 
 group :test do

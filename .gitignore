@@ -9,6 +9,7 @@
 .byebug_history
 .env.local
 .env.test.local
+.env.production.local
 
 # Created by https://www.gitignore.io/api/macos
 # Edit at https://www.gitignore.io/?templates=macos
