@@ -43,5 +43,8 @@ module RubyOnRailsLink
     # Application configuration
     configatron.app_name = 'AMATIR.DEV'
     configatron.ga.tracking_id = 'UA-82068314-2'
+
+    # Language
+    config.i18n.default_locale = :id
   end
 end

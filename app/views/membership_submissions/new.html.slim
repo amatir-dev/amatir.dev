@@ -1,45 +1,45 @@
 section.section
   .columns
     .column
-      h1.title Join the Ruby on Rails Slack Community
+      h1.title Bergabung Komunitas AMATIR.DEV
 
-      p In order for us to give you access we need to know a little bit more about you and we need your name and email address.
-        Optional fields are used to help us deter spammers. 
-        At some point we may use this information to build out better member profiles
-        or other useful tools. If that happens you will, of course, have the option to opt out and/or edit your data.
-        Every submission is manually reviewed by one of our community admins.
-        We try to respond within a couple of days.
+      p Agar kami dapat memberi Anda akses, kami perlu tahu sedikit lebih banyak tentang Anda dan kami membutuhkan nama dan alamat email Anda.
+        Kolom opsional digunakan untuk membantu kami mencegah spammer.
+        Pada titik tertentu kami dapat menggunakan informasi ini untuk membuat profil anggota yang lebih baik atau alat lain yang bermanfaat.
+        Jika itu terjadi, tentu saja Anda bisa menolak berpartisipasi dan/atau mengedit data Anda.
+        Setiap registrasi ditinjau secara manual oleh salah satu admin komunitas kami.
+        Kami mencoba merespons secepat mungkin namun itu bukan janji.
 
   = form_for @submission, url: membership_submissions_path do |f|
     .columns
       .column
         .field
-          label.label First Name
+          label.label Nama Pertama
           .control
             = f.text_field :first_name, required: true, class: ["input", f.object.errors.key?(:first_name) ? "is-danger" : nil]
           .help 
-            | * Required by Slack
+            | * Diwajibkan oleh Slack
             span.has-text-danger<= f.object.errors[:first_name].to_sentence
 
         .field
-          label.label Last Name
+          label.label Nama Terakhir
           .control
             = f.text_field :last_name, required: true, class: ["input", f.object.errors.key?(:last_name) ? "is-danger" : nil]
           .help 
-            | * Required by Slack
+            | * Diwajibkan oleh Slack
             .has-text-danger<= f.object.errors[:last_name].to_sentence
 
         .field
-          label.label Email Address
+          label.label Alamat Email
           .control.has-icons-left
             = f.email_field :email, required: true, class: ["input", f.object.errors.key?(:email) ? "is-danger" : nil]
             span.icon.is-small.is-left: i class="fas fa-envelope"
           .help 
-            | * Required by Slack
+            | * Diwajibkan oleh Slack
             .has-text-danger<= f.object.errors[:email].to_sentence
 
         .field
-          label.label Location
+          label.label Lokasi
           .control.has-icons-left
             .select
               = f.select :location, ISO3166::Country.all_translated, include_blank: true
@@ -47,7 +47,7 @@ section.section
 
       .column
         .field
-          label.label Website
+          label.label Situs Web
           .control.has-icons-left
             = f.url_field :website_url, placeholder: "https://...", class: ["input", f.object.errors.key?(:website_url) ? "is-danger" : nil]
             span.icon.is-small.is-left: i class="fas fa-globe"
@@ -56,7 +56,7 @@ section.section
             | &nbsp;
 
         .field
-          label.label Github URL
+          label.label URL Github
           .control.has-icons-left
             = f.url_field :github_url, placeholder: "https://github.com/...", class: ["input", f.object.errors.key?(:github_url) ? "is-danger" : nil]
             span.icon.is-small.is-left: i class="fab fa-github"
@@ -65,7 +65,7 @@ section.section
             | &nbsp;
 
         .field
-          label.label Linkedin URL
+          label.label URL Linkedin
           .control.has-icons-left
             = f.url_field :linkedin_url, placeholder: "https://linkedin.com/in/...", class: ["input", f.object.errors.key?(:linkedin_url) ? "is-danger" : nil]
             span.icon.is-small.is-left: i class="fab fa-linkedin"
@@ -74,22 +74,22 @@ section.section
             | &nbsp;
 
         .field.fax
-          label.label Leave this field blank
+          label.label Kosongi kolom ini
           .control
-            = f.text_field :fax, placeholder: "leave this field blank", class: "input"
+            = f.text_field :fax, placeholder: "Kosongi kolom ini", class: "input"
 
         .field
-          label.label How did you hear about this community?
+          label.label Bagaimana/dari mana Anda menemukan komunitas ini?
           .control
             input.input[type="text" value=@submission.how_hear]
 
     .columns
       .column
         .field
-          label.label Tell us a little bit about yourself.
+          label.label Ceritakan pada kami sedikit tentang diri Anda.
           .control
             = f.text_area :introduction, required: true, rows: 2, class: "textarea"
-          .help * Required. We don't need specifics, we'd just like to get to know you a little better.
+          .help * Wajib diisi. Tidak harus terlalu spesifik, kami hanya ingin mengenal Anda lebih baik.
 
         .has-text-right
-          button.button.is-primary[type="submit"] Join Now
+          button.button.is-primary[type="submit"] Gabung Sekarang

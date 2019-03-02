@@ -9,12 +9,12 @@ class MembershipSubmissionsController < ApplicationController
     @submission = SlackMembershipSubmission.new(submission_params)
 
     if @submission.save
-      flash[:info] = "Thanks! Look for an email from us in the next couple of days."
+      flash[:info] = "Terima kasih! Tunggu email dari kami dalam beberapa hari."
       redirect_to root_path
       return
     end
 
-    flash[:danger] = "There were problems with your submission. Please try again."
+    flash[:danger] = "Ada masalah dengan pengajuan Anda. Mohon coba lagi."
     render action: :new
   end
 

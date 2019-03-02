@@ -56,3 +56,4 @@ end
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby] # windows does not include zoneinfo files, so bundle the tzinfo-data gem
 
+gem "rails-i18n", "~> 5.1"
