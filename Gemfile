@@ -9,7 +9,7 @@ end
 
 gem 'rails', '~> 5.1.6.1'
 
-gem 'dotenv-rails', groups: [:development, :test]                  # load environment variables from `.env`. must load before other gems
+gem 'dotenv-rails', require: 'dotenv/rails-now'                    # load environment variables from `.env`. must load before other gems
 
 gem "omniauth", '= 1.8.1'                                          # omniauth is a flexible authentication system utilizing rack middleware
 gem "omniauth-slack", '= 2.3.0'                                    # the slack strategy for omniauth and supports the sign in with slack approval flow
