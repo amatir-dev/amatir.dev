@@ -17,7 +17,7 @@ class SlackController < ApplicationController
     when "member_joined_channel"
       SlackEvent::MemberJoinedChannelJob.perform_later(slack_params.to_hash)
     when "team_join"
-      SlackEvent::TeamJoinJob.perform_later(slack_params.to_hash)
+      # SlackEvent::TeamJoinJob.perform_later(slack_params.to_hash)
     else
       SlackEvent::UnhandledJob.perform_later(slack_params.to_hash)
     end
