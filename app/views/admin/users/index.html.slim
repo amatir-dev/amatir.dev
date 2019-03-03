@@ -6,6 +6,7 @@ section.section
       table.table.is-hoverable
         thead
           tr
+            th
             th Admin
             th First Name
             th Last Name
@@ -16,13 +17,14 @@ section.section
         tbody
           - @users.each do |user|
             tr[class = (user.is_deleted? ? "has-text-grey-light" : "")]
+              td= image_tag user.data.dig('profile', 'image_32')
               td= user.admin_checkmark
               td= user.first_name
               td= user.last_name
               td= user.created_at.to_date.to_s(:db)
               td= user.email
               td
-                = "(UTC#{sprintf("%+d", user.tz_offset / 3600)})"
+                = "(UTC#{sprintf("%+d", user.tz_offset / 3600)}) "
                 = user.tz
               td= link_to "View", admin_user_path(user.id), class: "button"
 
