@@ -13,6 +13,6 @@ main.admin-members
 
               .card-content
                 h3.title
-                  = member.name
+                  = member.data['real_name']
                 = link_to "@#{member.username}", "slack://user?team=#{ENV["SLACK_TEAM"]}&id=#{member.uid}", class: "has-text-primary"
 
