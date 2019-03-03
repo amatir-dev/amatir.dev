@@ -24,7 +24,7 @@ section.section
               td= user.created_at.to_date.to_s(:db)
               td= user.email
               td
-                = "(UTC#{sprintf("%+d", user.tz_offset / 3600)}) "
+                = "(UTC#{sprintf("%+d", user.tz_offset.to_i / 3600)}) "
                 = user.tz
               td= link_to "View", admin_user_path(user.id), class: "button"
 
