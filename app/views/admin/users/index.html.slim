@@ -21,7 +21,9 @@ section.section
               td= user.last_name
               td= user.created_at.to_date.to_s(:db)
               td= user.email
-              td= user.tz
+              td
+                = "(UTC#{sprintf("%+d", user.tz_offset / 3600)})"
+                = user.tz
               td= link_to "View", admin_user_path(user.id), class: "button"
 
       == pagy_nav_bulma(@pagy)
