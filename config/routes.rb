@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   root "home#index"
   
   get "/ping", to: "home#ping"
+  get "/error", to: "home#error"
 
   namespace :slack do
     post "event"

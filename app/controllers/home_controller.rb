@@ -10,4 +10,8 @@ class HomeController < ApplicationController
   def ping
     render plain: 'pong'
   end
+
+  def error
+    raise StandardError, "Don't worry, I am fine."
+  end
 end
