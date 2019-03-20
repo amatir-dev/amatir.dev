@@ -6,4 +6,8 @@ class HomeController < ApplicationController
     @popular_channels = @other_channels.slice!(0, 6)
     @timezones = SlackUser.tz_offset_distribution
   end
+
+  def ping
+    render plain: 'pong'
+  end
 end
